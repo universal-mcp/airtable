@@ -12,7 +12,7 @@ from pyairtable.api.types import (
 )
 from pyairtable.formulas import Formula, to_formula_str
 
-class AirtableApp(APIApplication):
+class Airtable(APIApplication):
     """
     Application for interacting with the Airtable API to manage bases, tables,
     and records. Requires an Airtable API key configured via integration.
