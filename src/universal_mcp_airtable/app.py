@@ -26,7 +26,7 @@ class AirtableApp(APIApplication):
         if not self.integration:
              raise ValueError("Integration is not set for AirtableApp.")
         credentials = self.integration.get_credentials()
-        api_key = credentials.get("api_key")
+        api_key = credentials.get("api_key") or credentials.get("apiKey") or credentials.get("API_KEY")
         return Api(api_key)
 
     def list_bases(self) -> List[Base] | str:
